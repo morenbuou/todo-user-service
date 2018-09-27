@@ -38,7 +38,7 @@ public class UserControllerTest {
         given(userService.getPrincipal()).willReturn(user);
 
         mockMvc.perform(
-                get("/user").cookie(new Cookie("Authorization", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjF9.eYLgUZQjU6-JJrWxiEmNxq5ACtkMiBhEbf5KsJq8yWY")))
+                get("/users/authentication").cookie(new Cookie("Authorization", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjF9.eYLgUZQjU6-JJrWxiEmNxq5ACtkMiBhEbf5KsJq8yWY")))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id").value(1l))
                 .andExpect(jsonPath("$.username").value("user"))
