@@ -12,8 +12,9 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    @GetMapping(value = "/user")
+    @GetMapping(value = "/users/authentication")
     public User getUserByToken() {
+        System.out.println("test");
         return userService.getPrincipal();
     }
 

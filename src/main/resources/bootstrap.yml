@@ -1,6 +1,6 @@
 #spring:
 #  application:
-#    name: todoService
+#    name: userService
 #  profiles:
 #    active: dev
 #  cloud:
