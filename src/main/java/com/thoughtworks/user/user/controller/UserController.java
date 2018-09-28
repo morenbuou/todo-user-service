@@ -26,7 +26,6 @@ public class UserController {
 
     @GetMapping(value = "/authentication")
     public User getUserByToken() {
-        System.out.println("test");
         return userService.getPrincipal();
     }
 
